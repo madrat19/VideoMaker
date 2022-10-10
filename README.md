@@ -1,6 +1,6 @@
 # videoMaker
 ## Description:
-This is a complete system for Youtube video generation. It parses Reddit posts, passes them through a bunch of technologies (like google text-to-speech or openAI language model) and makes a video based on it. Project is still in work so there may be some new features in the future.
+This is a complete system for Youtube video generation. It parses Reddit posts, passes them through a bunch of technologies (like google text-to-speech or openAI language model) and makes a video based on it. Project is still in work so there may be some bugs or some new features in the future.
 
 Some data is hidden (api-keys, personal data) so code is not going to work out of the box.
 
