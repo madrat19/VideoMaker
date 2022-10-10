@@ -14,4 +14,4 @@ https://www.youtube.com/channel/UCkvdRMBR72D5NchlIl_b9bA
 https://www.youtube.com/channel/UCTL3J-QitJXnl5A3x47G35w
 
 ## Technologies used:
-Reddit API, Google text-to-speech API, Midjourney AI, Discord API, YouTube Data API, OpenAI API 
+Reddit API, Google text-to-speech API, Midjourney AI, Discord API, YouTube Data API, OpenAI API...
