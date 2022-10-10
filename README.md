@@ -6,8 +6,11 @@ Some data is hidden (api-keys, personal data) so code is not going to work out o
 
 ## The result:
 Our YouTube channels automated by this system:
+
 https://www.youtube.com/channel/UC9TCOsexImHaSj8jp8mUEGQ
+
 https://www.youtube.com/channel/UCkvdRMBR72D5NchlIl_b9bA
+
 https://www.youtube.com/channel/UCTL3J-QitJXnl5A3x47G35w
 
 ## Technologies used:
