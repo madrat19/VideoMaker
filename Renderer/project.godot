@@ -1,0 +1,94 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+_global_script_classes=[{
+"base": "MarginContainer",
+"class": &"Comment",
+"language": &"GDScript",
+"path": "res://scenes/comment/comment.gd"
+}, {
+"base": "MarginContainer",
+"class": &"FakeComment",
+"language": &"GDScript",
+"path": "res://scenes/comment/fake_comment.gd"
+}, {
+"base": "PanelContainer",
+"class": &"Post",
+"language": &"GDScript",
+"path": "res://scenes/post/post.gd"
+}, {
+"base": "PanelContainer",
+"class": &"PostDynamic",
+"language": &"GDScript",
+"path": "res://scenes/post/post_dynamic.gd"
+}]
+_global_script_class_icons={
+"Comment": "",
+"FakeComment": "",
+"Post": "",
+"PostDynamic": ""
+}
+
+[application]
+
+config/name="reddit"
+run/main_scene="res://scenes/main/main.tscn"
+config/features=PackedStringArray("4.0", "Vulkan Clustered")
+boot_splash/show_image=false
+config/icon="res://icons/icon.png"
+
+[autoload]
+
+Data="*res://scripts/data.gd"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/vsync/vsync_mode=0
+window/stretch/mode="canvas_items"
+
+[editor]
+
+movie_writer/mjpeg_quality=0.9
+movie_writer/movie_file="C:/Users/wotni/Documents/Projects/Python/Project/renderer/test.avi"
+movie_writer/disable_vsync=true
+
+[gui]
+
+theme/custom="res://themes/main_theme.tres"
+
+[importer_defaults]
+
+texture={
+"compress/bptc_ldr": 0,
+"compress/channel_pack": 0,
+"compress/hdr_compression": 1,
+"compress/lossy_quality": 0.7,
+"compress/mode": 0,
+"compress/normal_map": 0,
+"detect_3d/compress_to": 1,
+"mipmaps/generate": true,
+"mipmaps/limit": 256,
+"process/fix_alpha_border": true,
+"process/hdr_as_srgb": false,
+"process/hdr_clamp_exposure": false,
+"process/normal_map_invert_y": false,
+"process/premult_alpha": false,
+"process/size_limit": 0,
+"roughness/mode": 0,
+"roughness/src_normal": ""
+}
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=2
+anti_aliasing/quality/msaa=3
+textures/default_theme_scale=8.0

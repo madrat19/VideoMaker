@@ -1,0 +1,29 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://b85dyfffu3yni"]
+
+[ext_resource type="FontFile" uid="uid://dt3y03nnrw76y" path="res://fonts/Noto Sans/NotoSans-ExtraBold.ttf" id="1_qb6rf"]
+[ext_resource type="FontFile" uid="uid://mv14e4tmtb6i" path="res://fonts/Noto Sans/NotoSans-Regular.ttf" id="1_vbxhu"]
+[ext_resource type="FontFile" uid="uid://bt67cjfo26uks" path="res://fonts/Noto Sans/NotoSans-SemiBold.ttf" id="1_vsib4"]
+[ext_resource type="FontFile" uid="uid://yutytk3jwwo4" path="res://fonts/Noto Sans/NotoSans-Bold.ttf" id="1_wd11f"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nye1c"]
+bg_color = Color(1, 1, 1, 1)
+
+[resource]
+default_font = ExtResource("1_vbxhu")
+default_font_size = 24
+BigBoldOpaqueLabel/base_type = &"Label"
+BigBoldOpaqueLabel/font_sizes/font_size = 28
+BigBoldOpaqueLabel/fonts/font = ExtResource("1_vsib4")
+Label/colors/font_color = Color(0, 0, 0, 1)
+Label/font_sizes/font_size = 24
+Panel/styles/panel = SubResource("StyleBoxFlat_nye1c")
+SmallBoldOpaqueLabel/base_type = &"Label"
+SmallBoldOpaqueLabel/font_sizes/font_size = 20
+SmallBoldOpaqueLabel/fonts/font = ExtResource("1_wd11f")
+SmallTransparentBoldLabel/base_type = &"Label"
+SmallTransparentBoldLabel/colors/font_color = Color(0, 0, 0, 0.470588)
+SmallTransparentBoldLabel/font_sizes/font_size = 20
+SmallTransparentBoldLabel/fonts/font = ExtResource("1_qb6rf")
+SmallTransparentSlimLabel/base_type = &"Label"
+SmallTransparentSlimLabel/colors/font_color = Color(0, 0, 0, 0.509804)
+SmallTransparentSlimLabel/font_sizes/font_size = 20

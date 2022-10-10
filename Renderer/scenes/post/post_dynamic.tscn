@@ -1,0 +1,346 @@
+[gd_scene load_steps=15 format=3 uid="uid://dmxv1clri3vgh"]
+
+[ext_resource type="Texture2D" uid="uid://qcmlcw88sxda" path="res://icons/circle.png" id="1_2cwku"]
+[ext_resource type="Script" path="res://scenes/post/post_dynamic.gd" id="1_ora57"]
+[ext_resource type="Shader" path="res://shaders/avatar.gdshader" id="2_04cp2"]
+[ext_resource type="Texture2D" uid="uid://dgvfit31woig" path="res://icons/avatar.jpg" id="3_rc4wq"]
+[ext_resource type="Theme" uid="uid://b85dyfffu3yni" path="res://themes/main_theme.tres" id="5_25pxb"]
+[ext_resource type="Texture2D" uid="uid://luet7eo7iwsu" path="res://icons/arrow-up.png" id="6_qpl7v"]
+[ext_resource type="Texture2D" uid="uid://2qtm8xsk4gbf" path="res://icons/gift.png" id="7_hd2st"]
+[ext_resource type="Texture2D" uid="uid://dri7x6sv44bxn" path="res://icons/message.png" id="8_j4dk8"]
+[ext_resource type="Texture2D" uid="uid://sm4eplcfin1d" path="res://icons/right.png" id="8_rvmd3"]
+[ext_resource type="Texture2D" uid="uid://b7oaumcyglg8" path="res://icons/bookmark.png" id="9_w5w51"]
+[ext_resource type="Texture2D" uid="uid://dfv3023attpyd" path="res://icons/more.png" id="10_elcc6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4sl0f"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 0)
+border_blend = true
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+corner_detail = 20
+anti_aliasing_size = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b4nxj"]
+bg_color = Color(0.8, 0.819608, 0.843137, 1)
+border_color = Color(0.6, 0.6, 0.6, 0)
+border_blend = true
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+shadow_color = Color(0, 0, 0, 0.878431)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_uweav"]
+shader = ExtResource("2_04cp2")
+mask = ExtResource("1_2cwku")
+radius = 4.0
+
+[node name="post" type="PanelContainer" groups=["fake_post"]]
+offset_right = 1111.0
+offset_bottom = 229.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_4sl0f")
+script = ExtResource("1_ora57")
+
+[node name="post_margins" type="MarginContainer" parent="."]
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 1134.0
+offset_bottom = 228.0
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 48
+theme_override_constants/margin_bottom = 24
+
+[node name="post_shmost" type="HBoxContainer" parent="post_margins"]
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 1085.0
+offset_bottom = 203.0
+theme_override_constants/separation = 20
+
+[node name="left_side" type="VBoxContainer" parent="post_margins/post_shmost"]
+offset_right = 41.0
+offset_bottom = 179.0
+
+[node name="arrow_up" type="TextureRect" parent="post_margins/post_shmost/left_side"]
+modulate = Color(1, 1, 1, 0.490196)
+texture_filter = 4
+custom_minimum_size = Vector2(40, 30)
+offset_right = 40.0
+offset_bottom = 30.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("6_qpl7v")
+ignore_texture_size = true
+
+[node name="ups" type="Label" parent="post_margins/post_shmost/left_side"]
+unique_name_in_owner = true
+offset_top = 34.0
+offset_right = 41.0
+offset_bottom = 65.0
+size_flags_horizontal = 4
+theme_type_variation = &"SmallBoldOpaqueLabel"
+text = "3.6k"
+
+[node name="arrow_down" type="TextureRect" parent="post_margins/post_shmost/left_side"]
+modulate = Color(1, 1, 1, 0.490196)
+texture_filter = 4
+custom_minimum_size = Vector2(40, 30)
+offset_top = 69.0
+offset_right = 40.0
+offset_bottom = 99.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("6_qpl7v")
+ignore_texture_size = true
+flip_v = true
+
+[node name="post_content" type="VBoxContainer" parent="post_margins/post_shmost"]
+offset_left = 61.0
+offset_right = 1061.0
+offset_bottom = 179.0
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="top_part" type="HBoxContainer" parent="post_margins/post_shmost/post_content"]
+offset_right = 1000.0
+offset_bottom = 36.0
+size_flags_horizontal = 3
+theme_override_constants/separation = 4
+
+[node name="avatar_container" type="MarginContainer" parent="post_margins/post_shmost/post_content/top_part"]
+custom_minimum_size = Vector2(36, 36)
+offset_right = 44.0
+offset_bottom = 36.0
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_right = 4
+
+[node name="background" type="Panel" parent="post_margins/post_shmost/post_content/top_part/avatar_container"]
+texture_filter = 6
+custom_minimum_size = Vector2(36, 36)
+offset_left = 4.0
+offset_right = 40.0
+offset_bottom = 36.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_b4nxj")
+
+[node name="avatar" type="TextureRect" parent="post_margins/post_shmost/post_content/top_part/avatar_container"]
+unique_name_in_owner = true
+texture_filter = 6
+material = SubResource("ShaderMaterial_uweav")
+custom_minimum_size = Vector2(35, 35)
+offset_left = 4.0
+offset_right = 39.0
+offset_bottom = 35.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("3_rc4wq")
+ignore_texture_size = true
+
+[node name="sub" type="Label" parent="post_margins/post_shmost/post_content/top_part"]
+unique_name_in_owner = true
+offset_left = 48.0
+offset_top = 2.0
+offset_right = 142.0
+offset_bottom = 33.0
+theme_type_variation = &"SmallBoldOpaqueLabel"
+text = "r/donqon
+"
+
+[node name="dot" type="Label" parent="post_margins/post_shmost/post_content/top_part"]
+offset_left = 146.0
+offset_top = 2.0
+offset_right = 152.0
+offset_bottom = 33.0
+theme_type_variation = &"SmallTransparentSlimLabel"
+text = "·"
+
+[node name="author" type="Label" parent="post_margins/post_shmost/post_content/top_part"]
+unique_name_in_owner = true
+offset_left = 156.0
+offset_top = 2.0
+offset_right = 431.0
+offset_bottom = 33.0
+theme_type_variation = &"SmallTransparentSlimLabel"
+text = "Posted by u/ignoremefornow"
+
+[node name="time" type="Label" parent="post_margins/post_shmost/post_content/top_part"]
+unique_name_in_owner = true
+offset_left = 435.0
+offset_top = 2.0
+offset_right = 516.0
+offset_bottom = 33.0
+theme_type_variation = &"SmallTransparentSlimLabel"
+text = "2 hr. ago"
+
+[node name="title" type="Label" parent="post_margins/post_shmost/post_content"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(720, 0)
+offset_top = 46.0
+offset_right = 1000.0
+offset_bottom = 88.0
+theme_type_variation = &"BigBoldOpaqueLabel"
+text = "How are encryption keys shared between two devices?"
+autowrap_mode = 3
+
+[node name="bottom_part_container" type="MarginContainer" parent="post_margins/post_shmost/post_content"]
+offset_top = 98.0
+offset_right = 1000.0
+offset_bottom = 179.0
+theme = ExtResource("5_25pxb")
+
+[node name="bottom_part" type="VBoxContainer" parent="post_margins/post_shmost/post_content/bottom_part_container"]
+offset_right = 1000.0
+offset_bottom = 81.0
+
+[node name="content" type="Label" parent="post_margins/post_shmost/post_content/bottom_part_container/bottom_part"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(1000, 0)
+offset_right = 1000.0
+offset_bottom = 34.0
+size_flags_vertical = 1
+text = "Take care of yourself. Clean, shower, deodorant, the basics. Get a haircut on a mostly regular basis. Work out and get in shape. It’s crazy how someone can look \"ugly\" and then get into shape and get a haircut and you see how they look after. Game changing Take care of yourself. Clean, shower, deodorant, the basics. Get a haircut on a mostly regular basis. Work out and get in shape. It’s crazy how someone can look \"ugly\" and then get into shape and get a haircut and you see how they look after. Game changingTake care of yourself. Clean, shower, deodorant, the basics. Get a haircut on a mostly regular basis. Work out and get in shape. It’s crazy how someone can look \"ugly\" and then get into shape and get a haircut and you see how they look after. Game changingTake care of yourself. Clean, shower, deodorant, the basics. Get a haircut on a mostly regular basis. Work out and get in shape. It’s crazy how someone can look \"ugly\" and then get into shape and get a haircut and you see how they look after. Game changingTake care of yourself. Clean, shower, deodorant, the basics. Get a haircut on a mostly regular basis. Work out and get in shape. It’s crazy how someone can look \"ugly\" and then get into shape and get a haircut and you see how they look after. Game changingTake care of yourself. Clean, shower, deodorant, the basics. Get a haircut on a mostly regular basis. Work out and get in shape. It’s crazy how someone can look \"ugly\" and then get into shape and get a haircut and you see how they look after. Game changingTake care of yourself. Clean, shower, deodorant, the basics. Get a haircut on a mostly regular basis. Work out and get in shape. It’s crazy how someone can look \"ugly\" and then get into shape and get a haircut and you see how they look after. Game changingTake care of yourself. Clean, shower, deodorant, the basics. Get a haircut on a mostly regular basis. Work out and get in shape. It’s crazy how someone can look \"ugly\" and then get into shape and get a haircut and you see how they look after. Game changingTake care of yourself. Clean, shower, deodorant, the basics. Get a haircut on a mostly regular basis. Work out and get in shape. It’s crazy how someone can look \"ugly\" and then get into shape and get a haircut and you see how they look after. Game changing"
+autowrap_mode = 3
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="lowest_part_container" type="MarginContainer" parent="post_margins/post_shmost/post_content/bottom_part_container/bottom_part"]
+offset_top = 38.0
+offset_right = 1000.0
+offset_bottom = 81.0
+theme_override_constants/margin_left = -8
+theme_override_constants/margin_top = 8
+
+[node name="lowest_part" type="HBoxContainer" parent="post_margins/post_shmost/post_content/bottom_part_container/bottom_part/lowest_part_container"]
+offset_left = -8.0
+offset_top = 8.0
+offset_right = 1000.0
+offset_bottom = 43.0
+size_flags_horizontal = 3
+theme_override_constants/separation = 4
+
+[node name="action_part" type="HBoxContainer" parent="post_margins/post_shmost/post_content/bottom_part_container/bottom_part/lowest_part_container/lowest_part"]
+offset_right = 643.0
+offset_bottom = 35.0
+theme_override_constants/separation = 32
+
+[node name="duple" type="HBoxContainer" parent="post_margins/post_shmost/post_content/bottom_part_container/bottom_part/lowest_part_container/lowest_part/action_part"]
+offset_right = 179.0
+offset_bottom = 35.0
+theme_override_constants/separation = 8
+
+[node name="message" type="TextureRect" parent="post_margins/post_shmost/post_content/bottom_part_container/bottom_part/lowest_part_container/lowest_part/action_part/duple"]
+modulate = Color(1, 1, 1, 0.490196)
+texture_filter = 4
+custom_minimum_size = Vector2(35, 35)
+offset_right = 35.0
+offset_bottom = 35.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture = ExtResource("8_j4dk8")
+ignore_texture_size = true
+
+[node name="comments" type="Label" parent="post_margins/post_shmost/post_content/bottom_part_container/bottom_part/lowest_part_container/lowest_part/action_part/duple"]
+unique_name_in_owner = true
+offset_left = 43.0
+offset_top = 2.0
+offset_right = 179.0
+offset_bottom = 33.0
+theme_type_variation = &"SmallTransparentBoldLabel"
+text = "57 comments
+"
+
+[node name="duple2" type="HBoxContainer" parent="post_margins/post_shmost/post_content/bottom_part_container/bottom_part/lowest_part_container/lowest_part/action_part"]
+offset_left = 211.0
+offset_right = 320.0
+offset_bottom = 35.0
+theme_override_constants/separation = 8
+
+[node name="present" type="TextureRect" parent="post_margins/post_shmost/post_content/bottom_part_container/bottom_part/lowest_part_container/lowest_part/action_part/duple2"]
+modulate = Color(1, 1, 1, 0.490196)
+texture_filter = 4
+custom_minimum_size = Vector2(35, 35)
+offset_right = 35.0
+offset_bottom = 35.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture = ExtResource("7_hd2st")
+ignore_texture_size = true
+
+[node name="award" type="Label" parent="post_margins/post_shmost/post_content/bottom_part_container/bottom_part/lowest_part_container/lowest_part/action_part/duple2"]
+offset_left = 43.0
+offset_top = 2.0
+offset_right = 109.0
+offset_bottom = 33.0
+theme_type_variation = &"SmallTransparentBoldLabel"
+text = "Award"
+
+[node name="duple4" type="HBoxContainer" parent="post_margins/post_shmost/post_content/bottom_part_container/bottom_part/lowest_part_container/lowest_part/action_part"]
+offset_left = 352.0
+offset_right = 453.0
+offset_bottom = 35.0
+theme_override_constants/separation = 8
+
+[node name="arrow" type="TextureRect" parent="post_margins/post_shmost/post_content/bottom_part_container/bottom_part/lowest_part_container/lowest_part/action_part/duple4"]
+modulate = Color(1, 1, 1, 0.490196)
+texture_filter = 4
+custom_minimum_size = Vector2(35, 35)
+offset_right = 35.0
+offset_bottom = 35.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture = ExtResource("8_rvmd3")
+ignore_texture_size = true
+
+[node name="share" type="Label" parent="post_margins/post_shmost/post_content/bottom_part_container/bottom_part/lowest_part_container/lowest_part/action_part/duple4"]
+offset_left = 43.0
+offset_top = 2.0
+offset_right = 101.0
+offset_bottom = 33.0
+theme_type_variation = &"SmallTransparentBoldLabel"
+text = "Share"
+
+[node name="duple3" type="HBoxContainer" parent="post_margins/post_shmost/post_content/bottom_part_container/bottom_part/lowest_part_container/lowest_part/action_part"]
+offset_left = 485.0
+offset_right = 576.0
+offset_bottom = 35.0
+theme_override_constants/separation = 8
+
+[node name="marker" type="TextureRect" parent="post_margins/post_shmost/post_content/bottom_part_container/bottom_part/lowest_part_container/lowest_part/action_part/duple3"]
+modulate = Color(1, 1, 1, 0.490196)
+texture_filter = 4
+custom_minimum_size = Vector2(35, 35)
+offset_right = 35.0
+offset_bottom = 35.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture = ExtResource("9_w5w51")
+ignore_texture_size = true
+
+[node name="save" type="Label" parent="post_margins/post_shmost/post_content/bottom_part_container/bottom_part/lowest_part_container/lowest_part/action_part/duple3"]
+offset_left = 43.0
+offset_top = 2.0
+offset_right = 91.0
+offset_bottom = 33.0
+theme_type_variation = &"SmallTransparentBoldLabel"
+text = "Save"
+
+[node name="dots" type="TextureRect" parent="post_margins/post_shmost/post_content/bottom_part_container/bottom_part/lowest_part_container/lowest_part/action_part"]
+modulate = Color(1, 1, 1, 0.490196)
+texture_filter = 4
+custom_minimum_size = Vector2(35, 35)
+offset_left = 608.0
+offset_right = 643.0
+offset_bottom = 35.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture = ExtResource("10_elcc6")
+ignore_texture_size = true

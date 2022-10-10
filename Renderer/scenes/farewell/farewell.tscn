@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1g844u0oouy8"]
+
+[ext_resource type="FontFile" uid="uid://bwqnbgi5pil3f" path="res://fonts/Noto Sans/NotoSans-Light.ttf" id="1_w7oor"]
+[ext_resource type="Texture2D" uid="uid://ce3dcqjliwnte" path="res://icons/subscribe-button.png" id="2_bugob"]
+
+[node name="farewell" type="CenterContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 161.0
+offset_top = 62.0
+offset_right = 1119.0
+offset_bottom = 657.0
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+offset_right = 958.0
+offset_bottom = 91.0
+theme_override_fonts/font = ExtResource("1_w7oor")
+theme_override_font_sizes/font_size = 64
+text = "Thank you for watching!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+offset_top = 95.0
+offset_right = 958.0
+offset_bottom = 595.0
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer"]
+texture_filter = 6
+custom_minimum_size = Vector2(324, 500)
+offset_right = 324.0
+offset_bottom = 500.0
+texture = ExtResource("2_bugob")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(0, 82)
+offset_left = 328.0
+offset_top = 209.0
+offset_right = 958.0
+offset_bottom = 291.0
+theme_override_fonts/font = ExtResource("1_w7oor")
+theme_override_font_sizes/font_size = 50
+text = "to see more videos like this."
+horizontal_alignment = 1

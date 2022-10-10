@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://y7iflog6etwq"]
+
+[ext_resource type="Script" path="res://scenes/main/main.gd" id="1_sgvgd"]
+
+[node name="main" type="Panel"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sgvgd")
+
+[node name="handle2" type="CenterContainer" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 64.0
+offset_bottom = 64.0
+metadata/_edit_layout_mode = 1
+
+[node name="handle" type="CenterContainer" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 64.0
+offset_bottom = 64.0
+metadata/_edit_layout_mode = 1

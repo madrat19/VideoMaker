@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scenes/comment/comment_handle.gd" id="1_vso2m"]
+
+[node name="comment_handle2" type="VBoxContainer"]
+theme_override_constants/separation = 24
+script = ExtResource("1_vso2m")
+metadata/_edit_layout_mode = 1

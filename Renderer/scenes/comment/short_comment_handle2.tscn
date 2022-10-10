@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://biu8du2427sxp"]
+
+[ext_resource type="Script" path="res://scenes/comment/short_comment_handle.gd" id="1_mkys7"]
+
+[node name="comment_handle2" type="CenterContainer"]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_mkys7")
+metadata/_edit_layout_mode = 1
